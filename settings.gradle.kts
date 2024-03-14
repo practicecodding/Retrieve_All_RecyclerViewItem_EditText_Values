@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Retrieve Value"
+rootProject.name = "Retrieve Values"
 include(":app")
