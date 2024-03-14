@@ -138,8 +138,9 @@ public class MainActivity extends AppCompatActivity {
                                     recyclerView2.setAdapter(adapter2);
                                     recyclerView2.setLayoutManager(new LinearLayoutManager(MainActivity.this));
                                     break;
-                                }
-                            }
+                                }// (mID.equals(id))
+
+                            }// end for loop
 
                             if (!mID.equals(id)){
                                 hashMap = new HashMap<>();
@@ -150,10 +151,11 @@ public class MainActivity extends AppCompatActivity {
                                 adapter2 = new MyAdapter2();
                                 recyclerView2.setAdapter(adapter2);
                                 recyclerView2.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-                            }
+                            } // (!mID.equals(id))
 
 
-                        }else {
+                        }// (purchase.size()>0)
+                        else {
                             hashMap = new HashMap<>();
                             hashMap.put("id",id);
                             hashMap.put("sku",sku);
@@ -164,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
                             recyclerView2.setLayoutManager(new LinearLayoutManager(MainActivity.this));
                         }
 
-                    }else {
+                    }// (!string.isEmpty())
+                    else {
 
                         for (int x=0; x<purchase.size(); x++){
                             HashMap hashMap1 = purchase.get(x);
@@ -174,8 +177,9 @@ public class MainActivity extends AppCompatActivity {
                                 adapter2 = new MyAdapter2();
                                 recyclerView2.setAdapter(adapter2);
                                 recyclerView2.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-                            }
-                        }
+                            }// (id1.equals(id))
+
+                        }// end for loop
                     }
 
                 }
